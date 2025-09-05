@@ -47,7 +47,7 @@ The service is built with:
 
 ## 🐳 Run with Docker
 
-You can pull and run the image directly from **Docker Hub**. Don't enter env if you are using the docker.
+You can pull and run the image directly from **Docker Hub** Don't enter env if you are using the docker.
 ⚠️ Note: This environment will be available for **3–4 days only** (for verification purposes).  
 
 ### 1️⃣ Pull the image
