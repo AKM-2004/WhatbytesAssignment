@@ -23,21 +23,21 @@ The service is built with:
 - `POST /api/auth/register/` → Register a new user with **name, email, and password**  
 - `POST /api/auth/login/` → Log in and receive a **JWT token**  
 
-### 🧑‍⚕️ Patient Management APIs
+### 🧑‍⚕️ Patient Management APIs (ID = PatentID)
 - `POST /api/patients/` → Add a new patient (**Authenticated users only**)  
 - `GET /api/patients/` → Retrieve all patients created by the logged-in user  
 - `GET /api/patients/<id>/` → Get details of a specific patient  
 - `PUT /api/patients/<id>/` → Update patient details  
 - `DELETE /api/patients/<id>/` → Delete a patient record  
 
-### 👨‍⚕️ Doctor Management APIs
+### 👨‍⚕️ Doctor Management APIs (ID = DocktorsID)
 - `POST /api/doctors/` → Add a new doctor (**Authenticated users only**)  
 - `GET /api/doctors/` → Retrieve all doctors  
 - `GET /api/doctors/<id>/` → Get details of a specific doctor  
 - `PUT /api/doctors/<id>/` → Update doctor details  
 - `DELETE /api/doctors/<id>/` → Delete a doctor record  
 
-### 🔗 Patient-Doctor Mapping APIs
+### 🔗 Patient-Doctor Mapping APIs (ID = MappingsID)
 - `POST /api/mappings/` → Assign a doctor to a patient  
 - `GET /api/mappings/` → Retrieve all patient-doctor mappings  
 - `GET /api/mappings/<patient_id>/` → Get all doctors assigned to a specific patient  
@@ -54,3 +54,12 @@ You can pull and run the image directly from **Docker Hub**.
 ```bash
 docker pull adkmboi/whatbytes
 docker run -d -p 8000:8000 --name patient-doctor-backend adkmboi/whatbytes
+```
+### ENV will be available for (3 to 4) days after that whole things will be change. 
+``` bash 
+DATABASE_URL = postgresql://neondb_owner:npg_6KSXutsMW0dD@ep-muddy-silence-adrbf7fo-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+ACCESS_TOKEN_SECRET = webbytes@123 
+REFRESH_TOKEN_SECRET = webbytes@456
+PORT = 8000
+```
+
