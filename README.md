@@ -11,7 +11,7 @@ It also includes **user authentication** with JWT tokens.
 
 The service is built with:
 - **Node.js & Express**
-- **PostgreSQL** with **Sequelize ORM**
+- **PostgreSQL(NEONDB)** with **Sequelize ORM**
 - **JWT & bcrypt** for secure authentication
 - **Docker** for containerized deployment
 
