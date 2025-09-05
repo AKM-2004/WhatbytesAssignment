@@ -1,0 +1,56 @@
+# 🏥 Patient-Doctor Management Backend
+
+![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
+![Express](https://img.shields.io/badge/Express.js-Backend-lightgrey)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-DB-blue)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange)
+
+This is a **RESTful backend API** for managing **patients, doctors, and their mappings**.  
+It also includes **user authentication** with JWT tokens.  
+
+The service is built with:
+- **Node.js & Express**
+- **PostgreSQL** with **Sequelize ORM**
+- **JWT & bcrypt** for secure authentication
+- **Docker** for containerized deployment
+
+---
+
+## 🚀 Features
+
+### 🔑 Authentication APIs
+- `POST /api/auth/register/` → Register a new user with **name, email, and password**  
+- `POST /api/auth/login/` → Log in and receive a **JWT token**  
+
+### 🧑‍⚕️ Patient Management APIs
+- `POST /api/patients/` → Add a new patient (**Authenticated users only**)  
+- `GET /api/patients/` → Retrieve all patients created by the logged-in user  
+- `GET /api/patients/<id>/` → Get details of a specific patient  
+- `PUT /api/patients/<id>/` → Update patient details  
+- `DELETE /api/patients/<id>/` → Delete a patient record  
+
+### 👨‍⚕️ Doctor Management APIs
+- `POST /api/doctors/` → Add a new doctor (**Authenticated users only**)  
+- `GET /api/doctors/` → Retrieve all doctors  
+- `GET /api/doctors/<id>/` → Get details of a specific doctor  
+- `PUT /api/doctors/<id>/` → Update doctor details  
+- `DELETE /api/doctors/<id>/` → Delete a doctor record  
+
+### 🔗 Patient-Doctor Mapping APIs
+- `POST /api/mappings/` → Assign a doctor to a patient  
+- `GET /api/mappings/` → Retrieve all patient-doctor mappings  
+- `GET /api/mappings/<patient_id>/` → Get all doctors assigned to a specific patient  
+- `DELETE /api/mappings/<id>/` → Remove a doctor from a patient  
+
+---
+
+## 🐳 Run with Docker
+
+You can pull and run the image directly from **Docker Hub**.  
+⚠️ Note: This environment will be available for **3–4 days only** (for verification purposes).  
+
+### 1️⃣ Pull the image
+```bash
+docker pull adkmboi/whatbytes
+docker run -d -p 8000:8000 --name patient-doctor-backend adkmboi/whatbytes
